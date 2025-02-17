@@ -1,0 +1,104 @@
+@use "./utilities/variables.scss";
+@use "./utilities/maps.scss";
+@use "./utilities/mixins.scss";
+
+
+
+@import "./layout/footer.scss";  /*footer*/
+@import "./layout/medias.scss"; /*medias*/
+@import "./html/carrito.scss";
+@import "./html/contacto.scss";
+@import "./html/iniciar-sesion.scss";
+@import "./html/medios-de-pago.scss";
+@import "./html/sobre-nosotros.scss";
+
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*main*/
+.presentacion{
+    @mixin flex (center, center)
+    background-color: rgb(203, 230, 245);
+    align-content: center;
+    padding: 20px;
+    border: 10px;
+    margin: 30px;
+}
+.presentacion-text{
+    display: flex;
+    flex-direction: column;
+    gap: .625rem;
+}
+.presentacion img{
+    width: 150px;
+    margin-left: 150px;
+}
+
+
+/*Categorias de productos*/
+
+.container-grid{
+    display: grid;
+    height: 600px;
+    width: 100%;
+    background-color: antiquewhite;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 50px 200px 250px;
+
+    grid-template-areas: 
+    "item1 item1 item1"
+    "item2 item2 item3"
+    "item2 item2 item4"
+    ;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1.25rem;
+    column-gap: 20px;
+    margin-bottom: 30px;
+}
+.title-categories{
+    grid-area: item1;
+    text-align: center;
+}
+.card-dermocosmetica{
+    background-color: white;
+    grid-area: item2;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+}
+.card-belleza{
+    background-color: white;
+    grid-area: item3;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+.card-cuidado{
+    background-color: white;
+    grid-area: item4;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.card-dermocosmetica img{
+    width: 70%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 3px;
+}
+.card-belleza img, .card-cuidado img{
+    width: 60%;
+    height: auto;
+    margin-bottom: 1rem;
+    padding: 3px;
+}

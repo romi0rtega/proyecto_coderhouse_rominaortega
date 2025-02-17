@@ -1,0 +1,45 @@
+@use "./utilities/variables.scss";
+@use "./utilities/maps.scss";
+@use "./utilities/mixins.scss";
+
+@import "./layout/footer.scss";  /*footer*/
+@import "./layout/medias.scss"; /*medias*/
+
+.promociones-titulo{
+    display: block;
+    background-color: map-get($colorfondo, color3 );
+    height: 150px;
+    text-align: center;
+    color: white;
+    justify-content: center;
+    align-content: center;
+}
+.promociones-titulo h1 {
+    margin: 30px;
+}
+
+.promos{
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    grid-template-rows: 60px repeat(3, 30%) ;
+    grid-template-areas: 
+    "item1 item1"
+    "item2 item2"
+    "item3 item4"
+    "item5 item5";
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    padding-left: 80px;
+}
+
+.promos h3 {grid-area: item1;justify-content: center; text-align: center; padding: 20px;}
+.img1 {
+    grid-area: item2;max-width: 800px;
+    justify-self: center;
+    align-self: center;
+}
+.img2{grid-area: item3; max-width: 300px;justify-self: center; align-self: center;}
+.img3{grid-area: item4;max-width: 300px; justify-self: center; align-self: center;}
+.img4{grid-area: item5;max-width: 500px; justify-self: center; align-self: center;}

@@ -1,0 +1,46 @@
+@use "./utilities/variables.scss";
+@use "./utilities/maps.scss";
+@use "./utilities/mixins.scss";
+
+@import "./layout/footer.scss";  /*footer*/
+@import "./layout/medias.scss"; /*medias*/
+
+.conocenos-mejor {
+    @mixin flex (center, center)
+    background-color: map-get($colorfondo, color2 );
+    margin: 20px;
+    margin-bottom: 10px;
+    padding: 20px;
+    text-align: justify;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px;
+    flex-direction: column;
+}
+iframe {
+    @mixin flex (center, center)
+    width:90%;
+    height: 400px;
+    align-content: center;
+    margin: 20px;
+    box-shadow: 2px 2px 10px;
+}
+section p {
+    margin: 20px;
+    justify-content: center;
+    align-content: center;
+}
+section p a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff; 
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+section p a:hover {
+    background-color: #0056b3;
+}

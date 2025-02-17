@@ -1,0 +1,51 @@
+@use "./utilities/variables.scss";
+@use "./utilities/maps.scss";
+@use "./utilities/mixins.scss";
+
+@import "./layout/footer.scss";  /*footer*/
+@import "./layout/medias.scss"; /*medias*/
+
+
+.registro{
+    @mixin flex (center, center)
+    height: 100vh;
+    width: 100%;
+}
+.ingresar {
+    display: flex;
+    background-color: map-get($colorfondo, color2 );
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border: 10px;
+    gap: .9375rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    text-align: center;
+}
+
+.ingresar input{ 
+    background-color: map-get($colorfondo, color1 );
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.ingresar input:focus { 
+    background-color: rgb(171, 218, 250);
+}
+
+.ingresar button {
+    background-color: map-get($colorfondo, color1 );
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+}
+.recordarme-check{
+    @mixin flex(start, center)
+    gap: 10px;
+}
+.botones{
+    @mixin flex (space-between, center)
+    gap: 10px;
+}

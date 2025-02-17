@@ -1,0 +1,28 @@
+@use "./utilities/variables.scss";
+@use "./utilities/maps.scss";
+@use "./utilities/mixins.scss";
+
+@import "./layout/medias.scss"; /*medias*/
+
+
+footer {
+    @include flex(center, center)
+    background-color: map-get($colorfondo , color3 );    
+    font-size: 17px;
+    padding: 20px;
+    border: 2px solid black;
+    gap: .3125rem;
+    flex-direction: column;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer ul{
+    list-style: none;
+
+}
+
+footer ul a{
+    text-decoration: none;
+    color: inherit;
+}
