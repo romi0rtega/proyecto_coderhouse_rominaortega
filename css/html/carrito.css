@@ -1,0 +1,22 @@
+/* Error: Module loop: this module is already being loaded.
+ *   ,--> scss\layout\footer.scss
+ * 5 | @use "../layout/footer.scss";  /*footer*∕
+ *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load
+ *   '
+ *   ,--> scss\html\carrito.scss
+ * 5 | @use "../layout/footer.scss";  /*footer*∕
+ *   | ============================ original load
+ *   '
+ *   scss\layout\footer.scss 5:1  @use
+ *   scss\html\carrito.scss 5:1   root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss\\layout\\footer.scss\a 5 \2502  @use "../layout/footer.scss";  /*footer*/\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss\\html\\carrito.scss\a 5 \2502  @use "../layout/footer.scss";  /*footer*/\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss\\layout\\footer.scss 5:1  @use\a   scss\\html\\carrito.scss 5:1   root stylesheet';
+}

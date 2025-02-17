@@ -1,9 +1,9 @@
-@use "./utilities/variables.scss";
-@use "./utilities/maps.scss";
-@use "./utilities/mixins.scss";
+@use "../utilities/variables.scss";
+@use "../utilities/maps.scss";
+@use "../utilities/mixins.scss";
 
-@import "./layout/footer.scss";  /*footer*/
-@import "./layout/medias.scss"; /*medias*/
+@use "../layout/footer.scss";  /*footer*/
+@use "../layout/medias.scss"; /*medias*/
 
 .promociones-titulo{
     display: block;

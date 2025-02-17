@@ -1,12 +1,12 @@
-@use "./utilities/variables.scss";
-@use "./utilities/maps.scss";
-@use "./utilities/mixins.scss";
+@use "../utilities/variables.scss";
+@use "../utilities/maps.scss";
+@use "../utilities/mixins.scss";
 
-@import "./layout/medias.scss"; /*medias*/
+@use "../layout/medias.scss"; /*medias*/
 
 
 footer {
-    @include flex(center, center)
+    @include flex(center, center);
     background-color: map-get($colorfondo , color3 );    
     font-size: 17px;
     padding: 20px;

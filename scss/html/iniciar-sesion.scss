@@ -1,13 +1,13 @@
-@use "./utilities/variables.scss";
-@use "./utilities/maps.scss";
-@use "./utilities/mixins.scss";
+@use "../utilities/variables.scss";
+@use "../utilities/maps.scss";
+@use "../utilities/mixins.scss";
 
-@import "./layout/footer.scss";  /*footer*/
-@import "./layout/medias.scss"; /*medias*/
+@use "../layout/footer.scss";  /*footer*/
+@use "../layout/medias.scss"; /*medias*/
 
 
 .registro{
-    @mixin flex (center, center)
+    @include flex (center, center);
     height: 100vh;
     width: 100%;
 }
@@ -42,10 +42,10 @@
     border: 1px solid black;
 }
 .recordarme-check{
-    @mixin flex(start, center)
+    @include flex(start, center);
     gap: 10px;
 }
 .botones{
-    @mixin flex (space-between, center)
+    @include flex (space-between, center);
     gap: 10px;
 }
