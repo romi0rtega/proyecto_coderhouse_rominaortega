@@ -1,14 +1,14 @@
-@use "./utilities/variables.scss";
-@use "./utilities/maps.scss";
-@use "./utilities/mixins.scss";
+@import "./utilities/variables";
+@import "./utilities/maps";
+@import  "./utilities/mixins";
 
-@use "./layout/footer.scss";  /*footer*/
-@use "./layout/medias.scss"; /*medias*/
-@use "./html/carrito.scss";
-@use "./html/contacto.scss";
-@use "./html/iniciar-sesion.scss";
-@use "./html/medios-de-pago.scss";
-@use "./html/sobre-nosotros.scss";
+@import "./layout/footer";  /*footer*/
+@import "./layout/medias"; /*medias*/
+@import "./html/carrito";
+@import "./html/contacto";
+@import "./html/iniciar-sesion";
+@import "./html/medios-de-pago";
+@import "./html/sobre-nosotros";
 
 
 *{
@@ -16,13 +16,34 @@
 };
 /*main*/
 .presentacion{
-    @include flex (center, center);
+    @include flex(center, center);
     background-color: rgb(203, 230, 245);
     align-content: center;
     padding: 20px;
     border: 10px;
     margin: 30px;
 };
+.tracking-in-expand {
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-expand {
+    0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+    }
+    40% {      opacity: 0.6;}
+    100% {    opacity: 1;}
+}
+@keyframes tracking-in-expand {
+    0% {
+    letter-spacing: -0.5em;
+    opacity: 0;}
+    40% {      opacity: 0.6;}
+    100% {     opacity: 1;}
+}
+
 .presentacion-text{
     display: flex;
     flex-direction: column;
@@ -32,6 +53,31 @@
     width: 150px;
     margin-left: 150px;
 };
+.scale-up-center {
+	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
 
 
 /*Categorias de productos*/
@@ -59,6 +105,8 @@
     grid-area: item1;
     text-align: center;
 };
+
+
 .card-dermocosmetica{
     background-color: white;
     grid-area: item2;
@@ -68,7 +116,10 @@
     align-items: center;
     font-size: 30px;
     text-align: center;
+    box-shadow: 2px 2px 8px;
+    border-radius: 10px;
 };
+
 .card-belleza{
     background-color: white;
     grid-area: item3;
@@ -77,6 +128,8 @@
     align-items: center;
     font-size: 25px;
     text-align: center;
+    box-shadow: 2px 2px 8px;
+    border-radius: 10px;
 };
 .card-cuidado{
     background-color: white;
@@ -86,6 +139,8 @@
     align-items: center;
     font-size: 25px;
     text-align: center;
+    box-shadow: 2px 2px 8px;
+    border-radius: 10px;
 };
 
 .card-dermocosmetica img{
@@ -100,3 +155,50 @@
     margin-bottom: 1rem;
     padding: 3px;
 };
+
+
+
+.category-section {
+    @include flex(center, center);
+    padding: 20px;
+    background-color: map-get($colorfondo, color1); 
+}
+
+.category-container {
+    @include flex(center, center);
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.category-card {
+    width: 200px;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 10px;
+    text-align: left;
+}
+
+.category-card img {
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.category-card p {
+    font-size: 16px;
+    color: black;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 2px 2px 8px;
+}

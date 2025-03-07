@@ -1,13 +1,9 @@
-/* Error: Module loop: this module is already being loaded.
- *   ,--> scss\layout\footer.scss
- * 5 | @use "../layout/footer.scss";  /*footer*∕
- *   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load
- *   '
- *   ,--> scss\html\iniciar-sesion.scss
- * 5 | @use "../layout/footer.scss";  /*footer*∕
- *   | ============================ original load
- *   '
- *   scss\layout\footer.scss 5:1        @use
+/* Error: There is no module with the namespace "maps".
+ *    ,
+ * 10 |     background-color: map-get(utilities/maps.$colorfondo , color3);    
+ *    |                                         ^^^^^^^^^^^^^^^^
+ *    '
+ *   scss\layout\footer.scss 10:41      @use
  *   scss\html\iniciar-sesion.scss 5:1  root stylesheet */
 
 body::before {
@@ -18,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Module loop: this module is already being loaded.\a   \250c \2500 \2500 > scss\\layout\\footer.scss\a 5 \2502  @use "../layout/footer.scss";  /*footer*/\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scss\\html\\iniciar-sesion.scss\a 5 \2502  @use "../layout/footer.scss";  /*footer*/\d\a   \2502  \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scss\\layout\\footer.scss 5:1        @use\a   scss\\html\\iniciar-sesion.scss 5:1  root stylesheet';
+  content: 'Error: There is no module with the namespace "maps".\a    \2577 \a 10 \2502      background-color: map-get(utilities/maps.$colorfondo , color3);    \d\a    \2502                                          ^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\layout\\footer.scss 10:41      @use\a   scss\\html\\iniciar-sesion.scss 5:1  root stylesheet';
 }

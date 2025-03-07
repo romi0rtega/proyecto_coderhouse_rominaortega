@@ -1,13 +1,13 @@
-@use "../utilities/variables.scss";
-@use "../utilities/maps.scss";
-@use "../utilities/mixins.scss";
+@import "../utilities/variables";
+@import "../utilities/maps";
+@import "../utilities/mixins";
 
-@use "../layout/footer.scss";  /*footer*/
-@use "../layout/medias.scss"; /*medias*/
+@import "../layout/footer";
+@import "../layout/medias"; /*medias*/
 
 .conocenos-mejor {
     @include flex (center, center);
-    background-color: map-get($colorfondo, color2 );
+    background-color: map-get($colorfondo, color2);
     margin: 20px;
     margin-bottom: 10px;
     padding: 20px;

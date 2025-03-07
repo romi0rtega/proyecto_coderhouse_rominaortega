@@ -1,21 +1,21 @@
-@use "../utilities/variables.scss";
-@use "../utilities/maps.scss";
-@use "../utilities/mixins.scss";
+@import "../utilities/variables";
+@import "../utilities/maps";
+@import "../utilities/mixins";
 
-@use "../layout/footer.scss";  /*footer*/
-@use "../layout/medias.scss"; /*medias*/
+@import "../layout/footer";
+@import "../layout/medias"; /*medias*/
 
 
 .section-carrito{
     @include flex (center, center);
-    background-color: map-get($colorfondo, color2 );
+    background-color: map-get($colorfondo, color2);
     width: 100%;
     height: 800px;
     padding: 20px;
 };
 
 .carrito-container{
-    background-color: map-get($colorfondo, color1 );
+    background-color: map-get($colorfondo, color1);
     width: 80%;
     max-width: 500px;
     height: 600px;
